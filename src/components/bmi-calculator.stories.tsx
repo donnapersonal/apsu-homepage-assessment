@@ -38,8 +38,10 @@ export const Empty: Story = {
     await expect(canvas.getByLabelText("Height (feet)")).toHaveValue(null);
     await expect(canvas.getByLabelText("Height (inches)")).toHaveValue(null);
     await expect(canvas.getByLabelText("Weight (lb)")).toHaveValue(null);
-    await expect(canvas.getByText("--")).toBeVisible();
-    await expect(canvas.getAllByText(/Your\s+Score/)[0]).toBeVisible();
+    await expect(canvas.getByText("Your result will appear here.")).toBeVisible();
+    await expect(
+      canvas.getByText(/BMI is one screening measure/),
+    ).toBeVisible();
   },
 };
 
