@@ -9,6 +9,11 @@ import { Workflow } from "@/components/sections/workflow";
 import { ProgramShowcase } from "@/components/sections/program-showcase";
 import { MedicationPlans } from "@/components/sections/medication-plans";
 import { ScheduleCarousel } from "@/components/sections/schedule-carousel";
+import { Testimonials } from "@/components/sections/testimonials";
+import { Faq } from "@/components/sections/faq";
+import { ClosingCta } from "@/components/sections/closing-cta";
+import { Footer } from "@/components/footer";
+
 import {
   localizeHomePageContent,
   type SiteLocale,
@@ -75,7 +80,11 @@ export function LocalizedHome({ baseContent }: { baseContent: HomePageContent })
           <ProgramShowcase program={sleepProgram} />
         </div>
         <ScheduleCarousel content={content.schedule} />
+        <Testimonials content={content.testimonials} />
+        <Faq content={content.faqs} />
+        <ClosingCta content={content.closingCta} />
       </main>
+      <Footer content={content.footer} />
     </div>
   );
 }
