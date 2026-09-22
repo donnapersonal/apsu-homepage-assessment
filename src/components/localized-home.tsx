@@ -2,18 +2,18 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import { BmiCalculator } from "@/components/bmi-calculator";
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { ClosingCta } from "@/components/sections/closing-cta";
+import { Faq } from "@/components/sections/faq";
 import { Hero } from "@/components/sections/hero";
-import { TrustStrip } from "@/components/sections/trust-strip";
-import { Workflow } from "@/components/sections/workflow";
-import { ProgramShowcase } from "@/components/sections/program-showcase";
 import { MedicationPlans } from "@/components/sections/medication-plans";
+import { ProgramShowcase } from "@/components/sections/program-showcase";
 import { ScheduleCarousel } from "@/components/sections/schedule-carousel";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Faq } from "@/components/sections/faq";
-import { ClosingCta } from "@/components/sections/closing-cta";
-import { Footer } from "@/components/footer";
-
+import { TrustStrip } from "@/components/sections/trust-strip";
+import { Workflow } from "@/components/sections/workflow";
 import {
   localizeHomePageContent,
   type SiteLocale,
@@ -75,6 +75,7 @@ export function LocalizedHome({ baseContent }: { baseContent: HomePageContent })
         <Workflow content={content.workflow} />
         <ProgramShowcase program={weightLossProgram} />
         <MedicationPlans plans={content.medicationPlans} />
+        <BmiCalculator />
         <div className="flex flex-col gap-8 pb-14 pt-3 xl:gap-20 xl:py-[120px]">
           <ProgramShowcase program={birthControlProgram} reverse />
           <ProgramShowcase program={sleepProgram} />
