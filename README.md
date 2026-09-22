@@ -115,19 +115,23 @@ The Figma file contains several copy and UX issues. I fixed the issues below int
 
 ## Interaction States And Motion
 
-The design file does not specify complete hover, focus, pressed, disabled, or keyboard states, so these were designed in the implementation.
+## Interaction States And Motion
 
-Self-designed states include:
-- Header links use hover color transitions and focus-visible rings.
-- Mobile navigation uses a dialog-style open and close interaction.
-- Primary and secondary CTA links use hover, focus, and pressed states.
-- Language chips expose selected state with `aria-pressed`; switchable languages have hover states.
-- FAQ rows expose expanded and collapsed states with `aria-expanded` and animated icon rotation.
-- Schedule carousel controls expose disabled states at the scroll edges.
+The Figma boards define the main visual layout, but they do not fully specify hover, focus, pressed, disabled, keyboard, or validation states. I added those states during implementation so the page can be reviewed as a working interface rather than a static mockup.
+
+Implemented interaction states include:
+
+- Header links use hover color changes and focus-visible rings.
+- Mobile navigation opens as a dialog-style menu with clear open and close states.
+- Primary and secondary CTAs include hover, focus-visible, and pressed states.
+- Language chips expose the selected language with `aria-pressed`; supported prototype languages can switch the page copy.
+- FAQ rows expose collapsed and expanded states with `aria-expanded`.
+- Schedule carousel controls expose disabled states at the first and last slides.
 - Schedule carousel supports keyboard navigation with ArrowLeft, ArrowRight, Home, and End.
-- BMI form controls expose invalid states with `aria-invalid`.
-- BMI unit controls use segmented pressed states.
-- Motion uses short, restrained transitions and honors reduced-motion preferences where practical.
+- `BMI` calculator starts with an empty result panel, then renders the calculated result after valid height and weight input.
+- `BMI` form controls expose invalid or incomplete values with `aria-invalid` and validation feedback instead of producing a result.
+- `BMI` unit controls use segmented pressed states for imperial and metric input modes.
+- Motion uses short transitions and respects reduced-motion preferences where practical.
 
 ## Responsive Notes
 
