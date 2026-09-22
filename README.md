@@ -60,6 +60,7 @@ The page is composed from section-level components so each major design region c
 - `src/components/ui/`: Shared UI primitives such as brand, icons, arrow links, social marks, and check lists.
 - `src/components/*.stories.tsx and src/components/sections/*.stories.tsx`: Storybook stories for stateful components.
 - `public/images/`: Local image and SVG assets used by the page.
+- `ai-logs/`: Relevant unedited AI session records for this assessment submission.
 
 ## Data Contract
 
@@ -105,7 +106,7 @@ These stories are intended to make interaction states reviewable outside the ful
 The Figma file contains several copy and UX issues. I fixed the issues below intentionally and kept the changes documented here.
 - Changed `Loss Weight In Your Way.` to `Lose Weight Your Way.` because the original copy has a grammar error.
 - Changed `Easy Manager Treatment` to `Easy Treatment Management` because the original phrase reads like a job title rather than a product feature.
-- Changed `Non-habit-forming Physician-prescribed For sensitive sleepers` to `Non-habit-forming, physician-prescribed care for sensitive sleepers`. for grammar, casing, punctuation, and readability.
+- Changed `Non-habit-forming Physician-prescribed For sensitive sleepers` to `Non-habit-forming, physician-prescribed care for sensitive sleepers.` for grammar, casing, punctuation, and readability.
 - Changed `US Board Certified MDs` to `US board-certified MDs` to use conventional casing and hyphenation.
 - Changed `Ready For Healthcare In Your Language?` to `Ready for healthcare in your language?` for sentence-style CTA casing.
 - Changed the BMI scale label from `Healthy Weight <18.5 - 24.9` to `Healthy 18.5 - 24.9` because the less-than sign on the lower bound was misleading.
@@ -139,6 +140,22 @@ Key responsive decisions:
 - Fixed-format UI elements such as carousel cards, medication cards, BMI inputs, CTA buttons, and treatment cards use stable dimensions at the Figma breakpoints.
 - Images are served locally to keep crops predictable during review.
 
+## AI Use
+
+OpenAI Codex was used as a development assistant during this project.
+
+I used AI support for:
+
+- Clarifying the take-home requirements and turning them into a checklist.
+- Reviewing the proposed content API shape and component breakdown.
+- Suggesting small implementation snippets, Storybook story variations, and README wording.
+- Debugging build errors, responsive edge cases, and interaction-state details.
+- Preparing the required AI session logs for submission.
+
+I made the final architecture decisions, implemented and reviewed the page sections, chose the documented design deviations, compared the result against the Figma boards, and ran the verification commands before submission.
+
+The relevant, unedited AI session records for this Apsu assessment submission are included under `ai-logs/`.
+
 ## Verification
 
 Recommended final checks before submission:
@@ -169,5 +186,4 @@ The repository should include:
 - README
 - Storybook stories
 - Mock data and content types
-- Complete AI logs under ai-logs/
-
+- Relevant unedited AI session records under `ai-logs/`
