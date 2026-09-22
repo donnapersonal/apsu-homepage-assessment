@@ -44,7 +44,7 @@ Pixel-level matching is prioritized at the two target boards. Between and beyond
 
 I treated the page as a small component library backed by a future API contract.
 
-Because there are no backend API docs, src/types/content.ts defines the data model first. src/data/home.ts acts as the mock backend response, and src/lib/content.ts is the boundary where a real CMS or API call could replace the mock data later.
+Because there are no backend API docs, `src/types/content.ts` defines the data model first. src/data/home.ts acts as the mock backend response, and `src/lib/content.ts` is the boundary where a real CMS or API call could replace the mock data later.
 
 The page is composed from section-level components so each major design region can be reviewed independently.
 
@@ -187,3 +187,4 @@ The repository should include:
 - Storybook stories
 - Mock data and content types
 - Relevant unedited AI session records under `ai-logs/`
+
