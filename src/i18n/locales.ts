@@ -69,7 +69,7 @@ const zh: Record<string, string> = {
   "Answers around the clock.": "全天候即时答复。",
   "The AI handles the language. Your physician makes the medical decisions.":
     "AI 负责语言沟通，医疗决策由医生作出。",
-  "Loss Weight In Your Way.": "以适合你的方式管理体重。",
+  "Loss Weight Your Way.": "以适合你的方式管理体重。",
   "A plan built around your goals and medical history.": "根据你的目标和病史制定个性化方案。",
   "Same-day doctor visits and prescriptions": "当日医生问诊与处方",
   "Dosage personalized": "个性化剂量",
