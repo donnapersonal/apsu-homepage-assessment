@@ -7,6 +7,8 @@ import { Hero } from "@/components/sections/hero";
 import { TrustStrip } from "@/components/sections/trust-strip";
 import { Workflow } from "@/components/sections/workflow";
 import { ProgramShowcase } from "@/components/sections/program-showcase";
+import { MedicationPlans } from "@/components/sections/medication-plans";
+import { ScheduleCarousel } from "@/components/sections/schedule-carousel";
 import {
   localizeHomePageContent,
   type SiteLocale,
@@ -67,10 +69,12 @@ export function LocalizedHome({ baseContent }: { baseContent: HomePageContent })
         <TrustStrip items={content.trustSignals} />
         <Workflow content={content.workflow} />
         <ProgramShowcase program={weightLossProgram} />
+        <MedicationPlans plans={content.medicationPlans} />
         <div className="flex flex-col gap-8 pb-14 pt-3 xl:gap-20 xl:py-[120px]">
           <ProgramShowcase program={birthControlProgram} reverse />
           <ProgramShowcase program={sleepProgram} />
         </div>
+        <ScheduleCarousel content={content.schedule} />
       </main>
     </div>
   );
